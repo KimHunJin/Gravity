@@ -1,0 +1,277 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dxmnd.gravitymembermanagementapplication.activity.MemberAddActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/search_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/backgorund"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/backgroundColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="#1F000000" />
+
+                <ImageView
+                    android:id="@+id/ic_activity_crate_room_select_room_image"
+                    android:layout_width="112dp"
+                    android:src="@drawable/img_activity_create_select_room"
+                    android:onClick="createInputImage"
+                    android:clickable="true"
+                    android:layout_height="112dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/roundshape" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/txtAddMemberName"
+                    android:text="이름"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/edtAddMemberName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:layout_marginRight="4dp"/>
+
+                <TextView
+                    android:id="@+id/txtAddMemberGender"
+                    android:text="성별"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+
+                <RadioGroup
+                    android:id="@+id/rdgAddMemberGender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="8dp"
+                    android:layout_gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/rbtAddMemberMale"
+                        android:text="남"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:id="@+id/rbtAddMemberFemale"
+                        android:text="여"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/txtAddStudentNumber"
+                    android:text="학번"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/edtAddStudentNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.85"
+                    android:layout_marginRight="4dp"
+                    android:inputType="number"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/txtAddHP"
+                    android:text="HP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/edtAddHP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.85"
+                    android:layout_marginRight="4dp"
+                    android:inputType="number"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/txtAddEmail"
+                    android:text="이메일"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/edtAddEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.85"
+                    android:layout_marginRight="4dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtAddPosition"
+                    android:text="부서"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <CheckBox
+                    android:id="@+id/cbAddDeveloper"
+                    android:text="개발"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"/>
+
+                <CheckBox
+                    android:id="@+id/cbAddPlanner"
+                    android:text="기획"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"/>
+
+                <CheckBox
+                    android:id="@+id/cbAddDesigner"
+                    android:text="디자인"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/txtAddIntroduce"
+                    android:text="한줄소개"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/edtAddIntroduce"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.85"
+                    android:layout_marginRight="4dp"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btnAddMemberSave"
+                    android:text="추가"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="4dp" />
+
+                <Button
+                    android:id="@+id/btnAddMemberCancel"
+                    android:text="취소"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

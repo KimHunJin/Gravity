@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dxmnd.gravitymembermanagementapplication.activity.MemberDeleteActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/search_toolbar"/>
+
+    <ListView
+        android:id="@+id/memberDeleteListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9">
+    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.1"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp">
+        <Button
+            android:id="@+id/btnDeleteMemberDelete"
+            android:text="삭제하기"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/roundshape"/>
+
+        <Button
+            android:id="@+id/btnDeleteMemberCancel"
+            android:text="취소"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/roundshape"/>
+    </LinearLayout>
+
+</LinearLayout>
